@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>社長のX作戦会議｜株式会社Alits</title>
+<meta name="description" content="全国の中小企業の社長様向け。ショート動画で140社を支援してきた株式会社Alitsが、Xアカウントを拝見し最初の30日の動きを30分でお伝えします。無料・オンライン。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --paper:#F7F8F6; --card:#FFFFFF; --ink:#171D17; --sub:#4F5D4F; --line:#DCE2DA;
+    --green:#256C28; --green-deep:#1B4F1E; --green-soft:#E7F0E6; --accent:#C9A227;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.85;font-size:16px}
+  h1,h2,h3{font-family:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;font-weight:900;letter-spacing:.02em;line-height:1.35;margin:0}
+  p{margin:0}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.18em;color:var(--green);border-left:3px solid var(--green);padding-left:10px;margin-bottom:14px}
+  .btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:700;padding:16px 34px;border-radius:999px;box-shadow:0 8px 24px rgba(37,108,40,.25);transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s}
+  .btn:hover{transform:translateY(-3px) scale(1.035);box-shadow:0 14px 30px rgba(37,108,40,.34)}
+  .btn:active{transform:translateY(-1px) scale(.98)}
+  .btn small{display:block;font-size:12px;font-weight:500;opacity:.9;letter-spacing:.05em}
+  .btnrow{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+  .btn.line{background:#06C755;box-shadow:0 8px 24px rgba(6,199,85,.28)}
+  .btn.line:hover{box-shadow:0 12px 28px rgba(6,199,85,.36)}
+  .btn.ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line);box-shadow:none;padding:14px 26px}
+  .btn.ghost:hover{border-color:#06C755;box-shadow:none}
+  .lineicon{display:inline-flex;width:18px;height:18px;vertical-align:-.28em;margin-right:8px}
+  .lineicon svg{width:100%;height:100%;fill:currentColor}
+
+  header{position:sticky;top:0;background:rgba(247,248,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;letter-spacing:.08em;color:var(--green);font-size:18px;text-decoration:none}
+  .logo span{color:var(--sub);font-weight:500;font-size:12px;margin-left:10px;letter-spacing:.1em}
+  header .btn{padding:10px 20px;font-size:14px;box-shadow:none}
+
+  .hero{position:relative;padding:88px 0 72px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(60% 70% at 85% 20%, rgba(37,108,40,.16), transparent 70%),
+    radial-gradient(40% 50% at 10% 90%, rgba(201,162,39,.12), transparent 70%);pointer-events:none}
+  .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55;pointer-events:none;z-index:0}
+  .blob.b1{width:120px;height:120px;top:14%;right:6%;background:radial-gradient(circle at 30% 30%,#A5D3A0,transparent 70%);animation:drift1 9s ease-in-out infinite}
+  .blob.b2{width:70px;height:70px;top:62%;right:24%;background:radial-gradient(circle at 30% 30%,var(--accent),transparent 70%);opacity:.35;animation:drift2 7s ease-in-out infinite}
+  .blob.b3{width:26px;height:26px;top:8%;left:44%;background:var(--green);opacity:.18;animation:drift3 6s ease-in-out infinite}
+  @keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-14px,16px) scale(1.08)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(12px,-14px)}}
+  @keyframes drift3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(10px,10px) scale(1.3)}}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .pop{opacity:0;transform:translateY(14px) scale(.98);animation:popIn .6s cubic-bezier(.2,.9,.3,1.3) forwards}
+  @keyframes popIn{to{opacity:1;transform:translateY(0) scale(1)}}
+  .hero h1{font-size:42px}
+  .hero h1 em{font-style:normal;color:var(--green);border-bottom:6px solid rgba(37,108,40,.18)}
+  .hero .lead{margin:24px 0 32px;font-size:17px;color:var(--sub);line-height:1.8}
+  .hero .meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:var(--sub)}
+  .hero .meta li{list-style:none;display:flex;align-items:center;gap:6px}
+  .hero ul{padding:0;margin:0}
+  .phone{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 24px 60px rgba(23,29,23,.10);transform:rotate(-2deg)}
+  .phone .bar{height:6px;width:60px;background:var(--line);border-radius:3px;margin:0 auto 18px}
+  .diag{display:grid;gap:12px}
+  .diag .row{display:flex;justify-content:space-between;align-items:center;background:var(--paper);border-radius:12px;padding:12px 14px;font-size:13px}
+  .diag .row b{font-weight:700}
+  .diag .tag{font-size:11px;padding:3px 9px;border-radius:999px;background:var(--green-soft);color:var(--green);font-weight:700}
+  .diag .tag.warn{background:#FBF1D9;color:#8A6A10}
+  .diag .verdict{margin-top:6px;border-top:1px dashed var(--line);padding-top:12px;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:15px;color:var(--green)}
+
+  section{padding:76px 0}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  h2{font-size:32px;margin-bottom:14px}
+  .sub{color:var(--sub);max-width:640px;margin-bottom:40px}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 24px;position:relative;overflow:hidden}
+  section.alt .card{background:var(--paper)}
+  .card .ic{width:52px;height:52px;border-radius:14px;background:var(--green-soft);display:grid;place-items:center;margin-bottom:16px}
+  .card .ic svg{width:26px;height:26px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:19px;margin-bottom:10px}
+  .card .k{font-size:12px;font-weight:700;letter-spacing:.15em;color:var(--green);margin-bottom:6px}
+  .card p{font-size:14.5px;color:var(--sub);line-height:1.7}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s}
+  .step{padding:28px 26px;border-left:1px solid var(--line);position:relative}
+  .step:first-child{border-left:0;padding-left:0}
+  .step .n{font-family:"Zen Old Mincho",serif;font-size:46px;font-weight:900;color:var(--green);line-height:1;opacity:.9}
+  .step h3{font-size:19px;margin:12px 0 8px}
+  .step p{font-size:14.5px;color:var(--sub)}
+
+  .why{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .why ul{padding:0;margin:0;display:grid;gap:14px}
+  .why li{list-style:none;display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .why li .dot{flex:none;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+  .why li b{display:block;font-size:15.5px;margin-bottom:2px}
+  .why li span{font-size:14px;color:var(--sub)}
+  .stat{background:var(--green);color:#fff;border-radius:22px;padding:36px 32px;position:relative;overflow:hidden}
+  .stat::after{content:"";position:absolute;right:-40px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.08)}
+  .stat .big{font-family:"Zen Old Mincho",serif;font-size:60px;font-weight:900;line-height:1}
+  .stat .big small{font-size:20px;margin-left:6px}
+  .stat p{margin-top:10px;font-size:14.5px;opacity:.92}
+  .stat .plat{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}
+  .stat .plat span{font-size:12px;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:4px 12px}
+
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .flow div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 18px;font-size:14px}
+  .flow div b{display:block;font-size:15px;margin-bottom:4px}
+  .flow div i{display:block;font-style:normal;font-size:12px;color:var(--green);font-weight:700;letter-spacing:.12em;margin-bottom:8px}
+
+  .monitor{background:var(--green-soft);border:1px solid rgba(37,108,40,.25);border-radius:18px;padding:26px 28px;margin-top:32px}
+  .monitor .k{font-size:12px;font-weight:700;letter-spacing:.15em;color:var(--green);margin-bottom:8px}
+  .monitor p{font-size:14.5px;color:var(--ink)}
+
+  .formwrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+  form{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px 32px;box-shadow:0 20px 50px rgba(23,29,23,.08)}
+  label{display:block;font-size:13.5px;font-weight:700;margin:16px 0 6px}
+  label:first-child{margin-top:0}
+  label .req{color:#B4321E;font-size:11px;margin-left:6px}
+  input[type=text],input[type=email],input[type=tel],input[type=url],select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);font:inherit;font-size:15px}
+  .choice{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .choice label{margin:0;border:1px solid var(--line);border-radius:10px;padding:12px 8px;text-align:center;cursor:pointer;font-size:13.5px;background:var(--paper)}
+  .choice input{display:none}
+  .choice input:checked+span{color:var(--green)}
+  .choice label:has(input:checked){border-color:var(--green);background:var(--green-soft)}
+  form .btn{width:100%;text-align:center;margin-top:22px;border:0;cursor:pointer;font:inherit;font-size:16px}
+  form .note{font-size:12px;color:var(--sub);margin-top:12px;text-align:center}
+  .promise{display:grid;gap:12px;margin-top:20px}
+  .promise div{display:flex;gap:10px;font-size:14.5px;color:var(--sub)}
+  .promise svg{flex:none;width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;margin-top:4px}
+
+  footer{padding:40px 0;font-size:13px;color:var(--sub);border-top:1px solid var(--line)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a{color:var(--sub)}
+
+  @media (max-width:820px){
+    .hero{padding:32px 0 48px}
+    .hero .wrap{grid-template-columns:1fr;gap:36px}
+    .hero h1{font-size:30px}
+    .phone{transform:none}
+    h2{font-size:24px}
+    .cards,.steps,.why,.flow,.formwrap{grid-template-columns:1fr}
+    .step{border-left:0;padding-left:0;border-top:1px solid var(--line)}
+    .step:first-child{border-top:0}
+    section{padding:56px 0}
+    .ticker span{font-size:12.5px}
+  }
+
+  /* ticker */
+  .ticker{background:var(--green-deep);color:#EAF3E9;overflow:hidden;white-space:nowrap;padding:9px 0}
+  .ticker .track{display:inline-flex;gap:48px;animation:tick 26s linear infinite}
+  .ticker span{display:inline-flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;letter-spacing:.04em}
+  .ticker svg{width:13px;height:13px;fill:#EAF3E9}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* x badge / icon */
+  .xicon{display:inline-flex;width:1em;height:1em;vertical-align:-.12em}
+  .xicon svg{width:100%;height:100%;fill:currentColor}
+  .xbadge{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:#fff;font-size:19px;font-weight:900;letter-spacing:.03em;padding:12px 24px 12px 14px;border-radius:999px;margin-bottom:20px;box-shadow:0 10px 26px rgba(23,29,23,.22);opacity:0;transform:translateY(14px) scale(.98);animation:popIn .6s cubic-bezier(.2,.9,.3,1.3) .05s forwards,wiggle 4.5s ease-in-out 1.2s infinite}
+  @keyframes wiggle{0%,85%,100%{transform:rotate(0)}88%{transform:rotate(-2deg)}91%{transform:rotate(2deg)}94%{transform:rotate(-1.2deg)}97%{transform:rotate(1.2deg)}}
+  .xbadge .xicon{width:22px;height:22px;background:#fff;color:var(--ink);border-radius:7px;padding:4px;flex:none}
+  .xbadge b{color:#A5D3A0;font-weight:900}
+  .xbadge .new{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.14);border-radius:999px;padding:3px 10px 3px 8px;font-size:11px;letter-spacing:.14em;margin-left:2px}
+  .xbadge .new i{width:6px;height:6px;border-radius:50%;background:#7CD67A;animation:blip 1.6s ease-in-out infinite}
+  @keyframes blip{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+
+  /* trust row (platform logos) */
+  .trustrow{display:flex;align-items:center;gap:14px;margin-top:24px;flex-wrap:wrap}
+  .trustrow .lbl{font-size:11.5px;color:var(--sub);letter-spacing:.1em}
+  .trustrow .marks{display:flex;gap:8px}
+  .trustrow .marks span{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .trustrow .marks svg{width:15px;height:15px;fill:currentColor}
+
+  /* hero visual (codex creative) */
+  .visual{position:relative}
+  .visual .frame{border-radius:26px;overflow:hidden;box-shadow:0 28px 70px rgba(23,29,23,.22);border:1px solid var(--line);animation:float 5s ease-in-out infinite}
+  .visual .frame img{display:block;width:100%;height:auto}
+  .visual .pin{position:absolute;top:-14px;right:-14px;background:var(--accent);color:#221a00;font-family:"Zen Old Mincho",serif;font-weight:900;font-size:13px;line-height:1.3;text-align:center;border-radius:50%;width:86px;height:86px;display:grid;place-items:center;box-shadow:0 10px 24px rgba(201,162,39,.45);animation:pulse 2.4s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-10px) rotate(-1.2deg)}}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+
+  /* scroll reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .card,.step,.why li{transition:transform .25s ease,box-shadow .25s ease}
+  .card:hover,.step:hover{transform:translateY(-4px)}
+  .card:hover{box-shadow:0 18px 40px rgba(23,29,23,.12)}
+</style>
+<!-- Meta Pixel（データセット「株式会社Alits ウェブ」ID 1073346848635105） -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1073346848635105');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1073346848635105&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#"><span class="xicon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span> Alits<span>社長のX作戦会議</span></a>
+    <a class="btn" href="#apply">無料で申し込む</a>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="track">
+    <span><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>ショート動画で年間20億回再生・140社支援の株式会社Alitsが、Xを始めました</span>
+    <span><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>5社限定・初月半額・無料30分の社長のX作戦会議</span>
+    <span><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>ショート動画で年間20億回再生・140社支援の株式会社Alitsが、Xを始めました</span>
+    <span><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>5社限定・初月半額・無料30分の社長のX作戦会議</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="wrap">
+    <div>
+      <div class="xbadge">
+        <span class="xicon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+        X運用代行、<b>始めました</b>
+        <span class="new"><i></i>NEW</span>
+      </div>
+      <div class="eyebrow pop" style="animation-delay:.15s">全国対応・オンライン面談・無料30分</div>
+      <h1 class="pop" style="animation-delay:.22s">社長の名前で<br>検索したとき、<br><em>何が出てきますか。</em></h1>
+      <p class="lead pop" style="animation-delay:.32s">動画で知られた社長は、次に名前で検索されます。<br>株式会社Alitsは、ショート動画で年間20億回再生、<br>140社の社長を動画に出してきた会社です。<br>同じ設計で、社長の言葉をXに残す運用を始めました。<br>今のアカウントを拝見し、最初の30日の動きを30分でお伝えします。</p>
+      <div class="btnrow pop" style="animation-delay:.42s">
+        <a class="btn" href="#apply">社長のX作戦会議に申し込む<small>申込から2営業日以内に日程候補をお送りします</small></a>
+        <a class="btn line" href="https://lin.ee/PbsDi32" target="_blank" rel="noopener"><span class="lineicon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .345-.281.63-.63.63h-2.385c-.345 0-.627-.285-.627-.63V8.108c0-.345.282-.63.63-.63h2.385c.346 0 .627.285.627.63 0 .348-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.345 0 .627.283.627.63 0 .344-.282.629-.627.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></span>LINEで相談する</a>
+      </div>
+      <ul class="meta pop" style="animation-delay:.5s">
+        <li>✔ 費用は一切かかりません</li>
+        <li>✔ Zoom / Google Meet・オンライン完結</li>
+        <li>✔ 全国どこからでもご参加いただけます</li>
+      </ul>
+      <div class="trustrow pop" style="animation-delay:.58s">
+        <span class="lbl">運用実績のあるSNS</span>
+        <span class="marks">
+          <span aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
+          <span aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.02-3.58.07-4.85c.15-3.23 1.66-4.77 4.92-4.92 1.27-.06 1.64-.07 4.85-.07zm0 1.62c-3.15 0-3.5.02-4.73.07-2.44.11-3.58 1.27-3.7 3.7-.05 1.23-.06 1.58-.06 4.73s.02 3.5.06 4.73c.11 2.42 1.26 3.58 3.7 3.7 1.23.05 1.58.06 4.73.06s3.5-.02 4.73-.06c2.43-.11 3.58-1.27 3.7-3.7.05-1.23.06-1.58.06-4.73s-.02-3.5-.06-4.73c-.11-2.43-1.27-3.58-3.7-3.7-1.23-.05-1.58-.07-4.73-.07zm0 2.72a5.37 5.37 0 1 1 0 10.74 5.37 5.37 0 0 1 0-10.74zm0 1.62a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.4-2.9a1.26 1.26 0 1 1 0 2.52 1.26 1.26 0 0 1 0-2.52z"/></svg></span>
+          <span aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+        </span>
+      </div>
+    </div>
+    <div class="visual pop" style="animation-delay:.3s">
+      <div class="frame"><img src="img/x-strong.png" alt="ショート動画の大手が、Xの運用を始めます。記事作成・投稿・返信まで株式会社Alitsが担当。5社限定 初月半額"></div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="wrap">
+    <div class="eyebrow">なぜXなのか</div>
+    <h2>動画は「知ってもらう」。Xは「信用してもらう」。</h2>
+    <p class="sub">ショート動画で社長を知った人は、次に名前で検索します。そこに考えが文章で残っていると、面接前・商談前の温度が変わります。</p>
+    <div class="cards">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6M11 8v6"/></svg></div>
+        <div class="k">検索</div>
+        <h3>名前で検索したとき、<br>何もない</h3>
+        <p>Xの国内利用者は約6,700万人。<br>投稿しているのは1割ほど、<br>発信している経営者はさらに少ない。<br>今始めると目立ちます。</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
+        <div class="k">信用</div>
+        <h3>会社のHPより先に、<br>社長のXが見られる</h3>
+        <p>信頼の残高がある状態で始まる商談。<br>条件より先に「誰と働くか」で選ばれる採用。<br>紹介と提携のつながりも同時に動きます。</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></div>
+        <div class="k">継続</div>
+        <h3>自分で書くと、<br>続かない</h3>
+        <p>忙しい社長が書き続けるのは難しい仕事です。<br>定期ヒアリングで考えを引き出し、<br>月12本のポストに言語化するところまで引き受けます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt reveal">
+  <div class="wrap">
+    <div class="eyebrow">作戦会議でやること</div>
+    <h2>30分で、最初の30日の動きが決まります。</h2>
+    <p class="sub">資料の説明ではなく、御社のXアカウントを画面に出しながら進めます。</p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>今のアカウントを拝見</h3><p>プロフィール・直近の投稿・検索したときの見え方を一緒に確認します。事前に拝見するので、当日は答え合わせから始まります。</p></div>
+      <div class="step"><div class="n">02</div><h3>最初の30日の動き</h3><p>定期ヒアリング・月12本の原稿・引用や交流の設計・プロフィール導線をどう組むかをお伝えします。</p></div>
+      <div class="step"><div class="n">03</div><h3>ご希望があれば運用のご案内</h3><p>売り込みはしません。作戦会議だけで終わっても構いません。ご希望の場合のみ、運用代行のご案内をします。</p></div>
+    </div>
+    <div class="monitor">
+      <div class="k">モニター募集中</div>
+      <p>先着5社限定で、初月半額のモニター条件でご案内しています（事例掲載にご協力いただける会社様が対象）。枠が埋まり次第終了します。詳しくは作戦会議の中でご説明します。</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="wrap">
+    <div class="eyebrow">株式会社Alitsについて</div>
+    <h2>140社の社長を、動画に出してきました。</h2>
+    <p class="sub">TikTok・Instagram・Xの運用支援を行う会社です。作る本数ではなく、「誰の声で何を言うか」から設計します。</p>
+    <div class="why">
+      <ul>
+        <li><span class="dot">1</span><div><b>企画・撮影ディレクション・数値分析まで一貫</b><span>編集だけを請け負う会社ではありません。数字を見て翌週の企画を変える運用です。</span></div></li>
+        <li><span class="dot">2</span><div><b>経営者の発信を設計する</b><span>ショート動画の顔出し、Xの言語化。社長の考えが届く形に整えます。</span></div></li>
+        <li><span class="dot">3</span><div><b>景表法・薬機法などのルールを踏まえる</b><span>「必ず」「No.1」等は使いません。数字は公称値のみでご説明します。</span></div></li>
+      </ul>
+      <div class="stat">
+        <div class="big"><span class="num" data-target="140">0</span><small>社</small></div>
+        <p>ショート動画運用の支援実績（年間<span class="num" data-target="20">0</span>億回再生）。同じ設計で、社長の言葉をXに残す運用を始めました。</p>
+        <div class="plat"><span>TikTok</span><span>Instagram</span><span>X</span><span>YouTube Shorts</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt reveal">
+  <div class="wrap">
+    <div class="eyebrow">お申し込みから当日まで</div>
+    <h2>申込から、2営業日以内にご連絡します。</h2>
+    <p class="sub">日程は12時〜21時（平日）の中から候補をお送りします。</p>
+    <div class="flow">
+      <div><i>STEP 1</i><b>フォームで申込</b>1分で完了。XのURLがあれば、事前に拝見します。</div>
+      <div><i>STEP 2</i><b>日程調整</b>2営業日以内に候補を3つお送りします。</div>
+      <div><i>STEP 3</i><b>作戦会議（30分）</b>オンラインで、Xアカウントを画面に出しながら進めます。</div>
+      <div><i>STEP 4</i><b>その後</b>ご希望の場合のみ、運用代行をご案内します。</div>
+    </div>
+  </div>
+</section>
+
+<section id="apply" class="reveal">
+  <div class="wrap formwrap">
+    <div>
+      <div class="eyebrow">お申し込み</div>
+      <h2>社長のX作戦会議<br>（無料・30分・オンライン）</h2>
+      <div class="promise">
+        <div><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>費用は一切かかりません。しつこい営業もしません。</span></div>
+        <div><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>御社のXアカウントを事前に拝見してから当日を迎えます。</span></div>
+        <div><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>オンライン面談なので、全国どこからでもご参加いただけます。</span></div>
+      </div>
+      <a class="btn line ghost-row" href="https://lin.ee/PbsDi32" target="_blank" rel="noopener" style="margin-top:24px;display:inline-flex"><span class="lineicon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .345-.281.63-.63.63h-2.385c-.345 0-.627-.285-.627-.63V8.108c0-.345.282-.63.63-.63h2.385c.346 0 .627.285.627.63 0 .348-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.345 0 .627.283.627.63 0 .344-.282.629-.627.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></span>お急ぎの方はLINEで相談する</a>
+    </div>
+    <form id="applyForm" action="#" method="post" novalidate>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <label>会社名<span class="req">必須</span></label>
+      <input type="text" name="company" required placeholder="株式会社〇〇">
+      <label>お名前<span class="req">必須</span></label>
+      <input type="text" name="name" required placeholder="山田 太郎">
+      <label>業種<span class="req">必須</span></label>
+      <select name="industry" required>
+        <option value="">選択してください</option>
+        <option>建設・設備（水道・電気・リフォーム）</option>
+        <option>クリニック・医療・介護</option>
+        <option>美容・エステ・ジム</option>
+        <option>飲食</option>
+        <option>不動産</option>
+        <option>士業・コンサルティング</option>
+        <option>その他</option>
+      </select>
+      <label>いま一番の困りごと<span class="req">必須</span></label>
+      <div class="choice">
+        <label><input type="radio" name="type" value="採用" required><span>採用</span></label>
+        <label><input type="radio" name="type" value="認知"><span>社長の発信・認知</span></label>
+        <label><input type="radio" name="type" value="集客"><span>集客・問い合わせ</span></label>
+      </div>
+      <label>XのURL（任意）</label>
+      <input type="url" name="sns" placeholder="https://x.com/...">
+      <label>メールアドレス<span class="req">必須</span></label>
+      <input type="email" name="email" required placeholder="you@example.com">
+      <label>電話番号（任意）</label>
+      <input type="tel" name="tel" placeholder="090-0000-0000">
+      <button class="btn" type="submit" id="applyBtn">無料で申し込む</button>
+      <p id="applyDone" style="display:none;margin-top:14px;padding:14px 16px;border-radius:12px;background:#E7F0E6;color:#171D17;font-weight:700">お申し込みを受け付けました。2営業日以内に日程候補をメールでお送りします。</p>
+      <p id="applyErr" style="display:none;margin-top:14px;color:#B3261E;font-weight:700">送信できませんでした。お手数ですがLINEからご連絡ください。</p>
+      <p class="note">送信いただいた情報は、作戦会議のご連絡以外には使用しません。<a href="https://alits.co.jp/privacypolicy/" target="_blank" rel="noopener">プライバシーポリシー</a></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>株式会社Alits　東京都新宿区新宿2-1-9 7F</div>
+    <div><a href="https://alits.co.jp/" target="_blank" rel="noopener">alits.co.jp</a></div>
+  </div>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        if(!e.target.dataset.counted){
+          e.target.dataset.counted = '1';
+          e.target.querySelectorAll('.num').forEach(animateNum);
+        }
+      }
+    });
+  },{threshold:0, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  // 保険: 高速スクロールでIntersectionObserverが拾えなかった場合に強制表示
+  window.addEventListener('scroll', function(){
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if(r.top < window.innerHeight && r.bottom > 0){ el.classList.add('in'); }
+    });
+  }, {passive:true});
+
+  function animateNum(el){
+    var target = parseInt(el.dataset.target,10);
+    var dur = 1100, start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/dur,1);
+      el.textContent = Math.round(target * (1 - Math.pow(1-p,3)));
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+</script>
+<script>
+  // 申込フォーム → Apps Script（メール通知 miyata@info-alits.com）。設置後にURLを入れる
+  var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxzRt22AEnx7U1XFtdz9JXbTtT3eNsVNZ5CKz7GCtDzV9PVJJMBl8PAViXuRbRDn5X52A/exec';
+  (function(){
+    var f = document.getElementById('applyForm'); if(!f) return;
+    f.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      if(!f.checkValidity()){ f.reportValidity(); return; }
+      var btn = document.getElementById('applyBtn'); btn.disabled = true; btn.textContent = '送信中…';
+      var fd = new FormData(f); fd.append('page', location.href);
+      var done = function(ok){
+        btn.disabled = false; btn.textContent = '無料で申し込む';
+        document.getElementById('applyDone').style.display = ok ? 'block' : 'none';
+        document.getElementById('applyErr').style.display = ok ? 'none' : 'block';
+        if(ok){ f.reset(); if(window.fbq) fbq('track','Lead'); }
+      };
+      if(!FORM_ENDPOINT){ done(false); return; }
+      fetch(FORM_ENDPOINT, {method:'POST', mode:'no-cors', body:fd}).then(function(){ done(true); }).catch(function(){ done(false); });
+    });
+  })();
+</script>
+</body>
+</html>
