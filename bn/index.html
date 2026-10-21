@@ -2,6 +2,16 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<script>
+  // A/Bテスト（10/21〜）: 来た人を半分ずつ v2（このページ）と v3（短いLP）に振り分ける。?lp=v2 / ?lp=v3 で固定
+  (function(){ try {
+    var q=new URLSearchParams(location.search), force=q.get('lp'), k='bn_ab', v=sessionStorage.getItem(k);
+    if(force==='v3'||force==='v2'){ v=force; } else if(!v){ v = Math.random()<0.5 ? 'v3' : 'v2'; }
+    sessionStorage.setItem(k,v);
+    if(v==='v3'){ location.replace('v3/'+location.search); }
+  } catch(e){} })();
+</script>
+
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>ナイトワークの実績、業界最大!!TikTok運用ならBUZZ Night</title>
 <meta name="description" content="夜職専門SNS運用代行 BUZZ NIGHT。“指名される・話題になる”SNSでバズるを売り上げに変える。無料相談はLINEから。">

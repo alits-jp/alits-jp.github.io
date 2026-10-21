@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BUZZ NIGHT｜ホスト・夜職のTikTok運用 無料相談</title>
+<meta name="description" content="夜職専門SNS運用代行 BUZZ NIGHT。企画・撮影・編集・投稿までまるごと。LINEで無料相談。">
+<meta name="theme-color" content="#0b1838">
+<meta name="robots" content="noindex">
+<style>
+  :root{--bg:#0b1838;--bg2:#13285a;--gold:#d8b25a;--gold2:#f3dd9b;--line:#06c755;--ink:#fff;--mute:#b7c3dd}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{background:#050c1f;color:var(--ink);font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;line-height:1.6}
+  .page{max-width:480px;margin:0 auto;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 60%,var(--bg) 100%);min-height:100vh;padding-bottom:96px}
+  img{display:block;max-width:100%;height:auto}
+
+  /* ファーストビュー: 開いた瞬間にLINEボタンが見える */
+  .fv{padding:28px 20px 22px;text-align:center;position:relative;overflow:hidden}
+  .fv:before{content:"";position:absolute;inset:-40% -20% auto;height:120%;background:radial-gradient(closest-side,rgba(216,178,90,.22),transparent);pointer-events:none}
+  .tag{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.06em;color:#1a1405;background:linear-gradient(90deg,var(--gold),var(--gold2));padding:5px 14px;border-radius:999px}
+  .fv h1{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:28px;line-height:1.38;margin:14px 0 10px;font-weight:800;word-break:keep-all}
+  .fv h1 em{font-style:normal;color:var(--gold2)}
+  .fv p.lead{font-size:14px;color:var(--mute)}
+  .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0 18px}
+  .proof div{border:1px solid rgba(216,178,90,.45);border-radius:12px;padding:10px 4px;background:rgba(255,255,255,.04)}
+  .proof b{display:block;font-size:20px;color:var(--gold2);line-height:1.2;font-family:"Hiragino Mincho ProN",serif}
+  .proof span{font-size:10.5px;color:var(--mute)}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:62px;border-radius:999px;background:var(--line);color:#fff;text-decoration:none;font-weight:800;font-size:18px;box-shadow:0 8px 22px rgba(6,199,85,.35)}
+  .btn svg{width:28px;height:28px;flex:none}
+  .btn small{display:block;font-size:11px;font-weight:600;opacity:.92;line-height:1.2}
+  .note{font-size:11.5px;color:var(--mute);margin-top:8px}
+
+  section{padding:26px 18px 6px}
+  h2{font-family:"Hiragino Mincho ProN",serif;font-size:21px;text-align:center;margin-bottom:14px;line-height:1.45}
+  h2 em{font-style:normal;color:var(--gold2)}
+
+  /* 実績（数字は2026年9月26日時点で各SNSを確認） */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .c{border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:10px 10px 12px;text-align:center}
+  .c img{width:78%;margin:0 auto 4px;-webkit-mask-image:radial-gradient(ellipse 62% 58% at 50% 50%,#000 70%,transparent 100%);mask-image:radial-gradient(ellipse 62% 58% at 50% 50%,#000 70%,transparent 100%)}
+  .c b{display:block;font-size:15px}
+  .c .n{font-size:12px;color:var(--gold2);font-weight:700}
+  .c .s{font-size:11px;color:var(--mute);line-height:1.45;margin-top:2px}
+  .asof{font-size:10.5px;color:var(--mute);text-align:right;margin-top:6px}
+
+  /* LINEを追加したら */
+  .steps{display:grid;gap:10px;counter-reset:s}
+  .step{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:14px;padding:13px 14px;border:1px solid rgba(255,255,255,.1)}
+  .step:before{counter-increment:s;content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1405;font-weight:900;display:grid;place-items:center}
+  .step b{display:block;font-size:15px}
+  .step span{font-size:12.5px;color:var(--mute)}
+
+  .free{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}
+  .free div{font-size:12.5px;background:rgba(6,199,85,.12);border:1px solid rgba(6,199,85,.45);border-radius:10px;padding:9px 10px}
+  .free div:before{content:"✓ ";color:var(--line);font-weight:900}
+
+  .faq details{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;margin:8px 0}
+  .faq summary{list-style:none;cursor:pointer;padding:13px 40px 13px 14px;font-weight:700;font-size:14.5px;position:relative}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:after{content:"+";position:absolute;right:14px;top:10px;font-size:20px;color:var(--gold2)}
+  .faq details[open] summary:after{content:"−"}
+  .faq .a{padding:0 14px 13px;font-size:13.5px;color:var(--mute)}
+
+  .end{padding:26px 18px}
+  footer{text-align:center;font-size:11px;color:var(--mute);padding:6px 0 20px}
+
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:10;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(5,12,31,0),rgba(5,12,31,.95) 40%);display:flex;justify-content:center;transform:translateY(120%);transition:transform .25s}
+  .sticky.on{transform:none}
+  .sticky .btn{max-width:456px;min-height:56px;font-size:16.5px}
+  @media (prefers-reduced-motion:no-preference){.fv .btn{animation:pulse 2.4s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.03)}}}
+</style>
+<script>
+  window.BN_CONFIG = {
+    HIT_URL: "https://alits-hisho-webhook.alits-hisho.workers.dev/bn/hit",
+    LP_VERSION: "v3",
+    LINE_DEFAULT: "https://lin.ee/SCB1z8V",
+    LINE_BY_PERSON: { amon: "", reno: "", sou: "", sakurai: "" },
+    CAMPAIGN_TO_PERSON: { "1876569465711618": "amon", "1876569603233233": "reno", "1873135328451730": "reno", "1873135543293954": "sou", "1874010669972930": "sakurai" },
+    NAME: { amon: "あもん", reno: "レノ", sou: "SOU", sakurai: "櫻井瑛紫" }
+  };
+</script>
+</head>
+<body>
+<main class="page">
+
+  <header class="fv">
+    <span class="tag">ホスト・夜職専門 TikTok運用</span>
+    <h1 id="h1">さっきの動画を<br>作ったチームに、<br><em>無料で相談</em>できます。</h1>
+    <p class="lead">企画・撮影・編集・投稿まで<br>まるごと任せられます。<br>ご用意いただくものは一切ありません。</p>
+    <div class="proof">
+      <div><b>2,000本</b><span>月間の制作本数</span></div>
+      <div><b>15億回</b><span>年間の再生数</span></div>
+      <div><b>400本</b><span>100万回再生超え<br>の動画（年間）</span></div>
+    </div>
+    <a class="btn" href="#" data-line>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5 1.1-.5 6-3.5 8.2-6 1.5-1.6 2.2-3.3 2.2-4.8C22.4 6.6 17.9 3 12 3Z"/></svg>
+      <span>LINEで無料相談する<small>相談・お見積もりは無料</small></span>
+    </a>
+    <p class="note">友だち追加だけでもOKです。</p>
+  </header>
+
+  <section>
+    <h2>BUZZ NIGHTで<em>伸びた人たち</em></h2>
+    <div class="cards">
+      <div class="c"><img src="../img/phone_kujo.webp" alt="九条星音のTikTok" loading="lazy"><b>九条星音</b><div class="n">TikTok 13.8万人</div><div class="s">運用開始半年で10万人達成</div></div>
+      <div class="c"><img src="../img/phone_sakurai.webp" alt="櫻井瑛紫のTikTok" loading="lazy"><b>櫻井瑛紫</b><div class="n">TikTok 11.8万人</div><div class="s">TikTok経由の新規指名ランキング2ヶ月連続No.1（YGD系列）</div></div>
+      <div class="c"><img src="../img/phone_lala.webp" alt="らららちゃんのTikTok" loading="lazy"><b>らららちゃん</b><div class="n">Instagram 30.4万人</div><div class="s">TikTokを見ての指名来店も多数</div></div>
+      <div class="c"><img src="../img/phone_mariten.webp" alt="まりてんのTikTok" loading="lazy"><b>まりてん</b><div class="n">TikTok 16.6万人</div><div class="s">自叙伝の出版に密着、重版決定</div></div>
+    </div>
+    <p class="asof">※フォロワー数は2026年9月26日時点</p>
+  </section>
+
+  <section>
+    <h2>LINEを追加したら</h2>
+    <div class="steps">
+      <div class="step"><div><b>友だち追加して、ひとこと送る</b><span>「相談したい」だけでOKです。</span></div></div>
+      <div class="step"><div><b>今のアカウントを教える</b><span>どんな発信をしたいか、ざっくりで大丈夫です。</span></div></div>
+      <div class="step"><div><b>無料相談・お見積もり</b><span>伸ばし方と費用をご提案します。決めるのはそれからで大丈夫です。</span></div></div>
+    </div>
+    <div class="free">
+      <div>相談は無料</div><div>用意するものなし</div><div>企画から投稿まで</div><div>InstagramやYouTubeにも</div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>よくある質問</h2>
+    <details><summary>お金はかかりますか？</summary><div class="a">相談とお見積もりは無料です。</div></details>
+    <details><summary>何を用意すればいいですか？</summary><div class="a">ありません。ヒアリングから企画・撮影・編集・投稿まで、すべてお任せいただけます。</div></details>
+    <details><summary>TikTok以外にも使えますか？</summary><div class="a">作った動画はInstagramやYouTubeショートにも使えます。</div></details>
+  </section>
+
+  <div class="end">
+    <a class="btn" href="#" data-line>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5 1.1-.5 6-3.5 8.2-6 1.5-1.6 2.2-3.3 2.2-4.8C22.4 6.6 17.9 3 12 3Z"/></svg>
+      <span>LINEで無料相談する<small>相談・お見積もりは無料</small></span>
+    </a>
+  </div>
+  <footer>© 株式会社Alits ／ BUZZ NIGHT</footer>
+</main>
+
+<nav class="sticky" id="sticky" aria-label="LINEで無料相談">
+  <a class="btn" href="#" data-line>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5 1.1-.5 6-3.5 8.2-6 1.5-1.6 2.2-3.3 2.2-4.8C22.4 6.6 17.9 3 12 3Z"/></svg>
+    <span>LINEで無料相談する</span>
+  </a>
+</nav>
+
+<script>
+(function(){
+  var C = window.BN_CONFIG, q = new URLSearchParams(location.search);
+  var keep = ['p','g','utm_id','utm_campaign','utm_source','ttclid'];
+  var st = {}; try { st = JSON.parse(sessionStorage.getItem('bn_src')||'{}'); } catch(e){}
+  keep.forEach(function(k){ if(q.get(k)) st[k] = q.get(k); });
+  try { sessionStorage.setItem('bn_src', JSON.stringify(st)); } catch(e){}
+  var person = st.p || C.CAMPAIGN_TO_PERSON[st.utm_id] || '';
+  var href = (person && C.LINE_BY_PERSON[person]) || C.LINE_DEFAULT;
+
+  // 広告の人の名前で見出しを出す（例: レノさんの動画を作ったチームに…）
+  if (person && C.NAME[person]) { document.getElementById('h1').innerHTML = C.NAME[person] + 'さんの動画を<br>作ったチームに、<br><em>無料で相談</em>できます。'; }
+
+  function hit(ev){
+    try {
+      var u = C.HIT_URL + '?ev=' + ev + '&p=' + encodeURIComponent(person||'') + '&c=' + encodeURIComponent(st.utm_id||'') +
+              '&g=' + encodeURIComponent(st.g||'') + '&lp=' + encodeURIComponent(C.LP_VERSION) + '&t=' + Date.now();
+      if (navigator.sendBeacon) { navigator.sendBeacon(u); } else { (new Image()).src = u; }
+    } catch(e){}
+  }
+  hit('view');
+  document.querySelectorAll('[data-line]').forEach(function(a){
+    a.href = href; a.target = '_blank'; a.rel = 'noopener';
+    a.addEventListener('click', function(){ hit('click'); });
+  });
+  // 1つ目のボタンが画面から消えたら、下に固定ボタンを出す
+  var first = document.querySelector('.fv .btn'), sticky = document.getElementById('sticky');
+  if ('IntersectionObserver' in window) { new IntersectionObserver(function(es){ sticky.classList.toggle('on', !es[0].isIntersecting); }).observe(first); } else { sticky.classList.add('on'); }
+})();
+</script>
+</body>
+</html>
