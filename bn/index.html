@@ -6,7 +6,7 @@
   // A/Bテスト（10/21〜）: 来た人を半分ずつ v2（このページ）と v3（短いLP）に振り分ける。?ab=v2 / ?ab=v3 で固定（広告URLに lp=v2 が入っているので lp では固定しない。10/22修正）
   (function(){ try {
     var q=new URLSearchParams(location.search), force=q.get('ab'), k='bn_ab', v=sessionStorage.getItem(k);
-    if(force==='v3'||force==='v2'){ v=force; } else if(!v){ v = Math.random()<0.5 ? 'v3' : 'v2'; }
+    if(force==='v3'||force==='v2'){ v=force; } else if(!v){ v = 'v2'; // 10/23 判定: v2 300表示・LINEクリック2 ／ v3 282表示・0 → v2に100%（?ab=v3 の固定は残す） }
     sessionStorage.setItem(k,v);
     if(v==='v3'){ location.replace('v3/'+location.search); }
   } catch(e){} })();
